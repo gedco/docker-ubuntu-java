@@ -4,13 +4,14 @@
 #   Run usage: docker run --name java-example --rm -d -it -v $(pwd)/src:/usr/src/ gedco:ubuntu-java /bin/bash
 #        Stop: docker stop java-example
 #
+# See Correto Releases here: https://github.com/corretto/corretto-8/releases
 FROM ubuntu:18.04
 
 # Mark this system as noninteractive.
 ENV DEBIAN_FRONTEND noninteractive
 ENV MAVEN_VERSION 3.6.2
 ENV PATH /opt/apache-maven-${MAVEN_VERSION}/bin:${PATH}
-ENV CORRETTO_URL https://d3pxv6yz143wms.cloudfront.net/8.222.10.1/java-1.8.0-amazon-corretto-jdk_8.222.10-1_amd64.deb
+ENV CORRETTO_URL https://d3pxv6yz143wms.cloudfront.net/8.232.09.1/java-1.8.0-amazon-corretto-jdk_8.232.09-1_amd64.deb
 ENV MAVEN_URL http://www.eu.apache.org/dist/maven/maven-3/${MAVEN_VERSION}/binaries/apache-maven-${MAVEN_VERSION}-bin.tar.gz
 
 # Install and configure all the software. Clean.
