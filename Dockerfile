@@ -11,7 +11,7 @@ FROM ubuntu:18.04
 ENV DEBIAN_FRONTEND noninteractive
 ENV MAVEN_VERSION 3.6.3
 ENV PATH /opt/apache-maven-${MAVEN_VERSION}/bin:${PATH}
-ENV CORRETTO_URL https://corretto.aws/downloads/resources/8.242.07.1/java-1.8.0-amazon-corretto-jdk_8.242.07-1_amd64.deb
+ENV CORRETTO_URL https://corretto.aws/downloads/latest/amazon-corretto-8-x64-linux-jdk.deb
 ENV MAVEN_URL http://www.eu.apache.org/dist/maven/maven-3/${MAVEN_VERSION}/binaries/apache-maven-${MAVEN_VERSION}-bin.tar.gz
 
 # Install and configure all the software. Clean.
