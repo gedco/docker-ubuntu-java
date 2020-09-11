@@ -16,7 +16,7 @@ ENV MAVEN_URL http://www.eu.apache.org/dist/maven/maven-3/${MAVEN_VERSION}/binar
 
 # Install and configure all the software. Clean.
 RUN apt-get update -qq; apt-get --yes upgrade -qq; \
-    apt-get install --yes java-common wget less nano -qq; \
+    apt-get install --yes java-common wget less nano curl -qq; \
     wget ${CORRETTO_URL} -O /tmp/corretto.deb --quiet; dpkg -i /tmp/corretto.deb; \
     cd /opt/; wget ${MAVEN_URL} -O maven.tar.gz --quiet; tar -xzf maven.tar.gz; \
     echo "------------ DONE -------------"; java -version; mvn -version; \
